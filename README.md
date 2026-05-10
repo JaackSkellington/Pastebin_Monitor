@@ -6,7 +6,7 @@ An asynchronous Pastebin leak monitor built for **Cyber Threat Intelligence (CTI
 
 ## 📋 Table of Contents
 
-- [How it works](#-how-it-works)
+- [How it works](#-How-it-works)
 - [Requirements](#-requirements)
 - [Installation](#-installation)
 - [Configuration](#-configuration)
