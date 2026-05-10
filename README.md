@@ -38,7 +38,7 @@ Each cycle runs a 4-step pipeline:
 │                         [4] Deep Content Filter                 │
 │                                        │                        │
 │                                        ▼                        │
-│                         💾 Save to results/ if match found      │
+│                       💾 Save to results / if match found      │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -49,7 +49,7 @@ Each cycle runs a 4-step pipeline:
 | **3 — Content collection** | Downloads raw content of each new paste with random jitter between requests |
 | **4 — Deep filter** | Matches the full content against all keywords |
 
-Already-processed IDs are kept in memory (`set`, O(1) lookup) and persisted to `vistos.txt` so state survives restarts.
+Already-processed IDs are kept in memory (`set`, O(1) lookup) and persisted to `checked.txt` so state survives restarts.
 
 ---
 
@@ -65,7 +65,7 @@ Already-processed IDs are kept in memory (`set`, O(1) lookup) and persisted to `
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/cti-pastebin-monitor.git
+git clone https://github.com/JaackSkellington/Pastebin_Monitor.git
 cd cti-pastebin-monitor
 
 # (Recommended) Create a virtual environment
@@ -190,7 +190,7 @@ cti-pastebin-monitor/
 ├── pastebin_monitor.py   # Main script
 ├── keywords.txt          # Your monitoring keywords
 │
-├── vistos.txt            # Auto-generated — already processed IDs
+├── checked.txt           # Auto-generated — already processed IDs
 │                         # (delete this file to reprocess everything from scratch)
 │
 └── results/              # Auto-generated — pastes with keyword matches
@@ -248,7 +248,7 @@ The **Matched in** field has three possible values:
 | Parameter | Short | Default | Description |
 |-----------|-------|---------|-------------|
 | `--keywords` | `-k` | `keywords.txt` | File containing the search keywords |
-| `--seen` | `-s` | `vistos.txt` | File for persisting already-processed IDs |
+| `--seen` | `-s` | `checked.txt` | File for persisting already-processed IDs |
 | `--interval` | `-i` | `120` | Seconds between `/archive` scans |
 
 ---
@@ -289,6 +289,6 @@ BACKOFF_403_429: int = 300  # 5 minutes (increase if needed)
 | Frequently blocked IP | Increase `JITTER_MIN/MAX` to 8–20s, set `Semaphore` to 1 |
 | More aggressive monitoring | Reduce `--interval` to 60s (use with caution) |
 | Large keyword list (50+) | No impact — filter is O(n) over content |
-| Reprocess everything from scratch | Delete `vistos.txt` before restarting |
+| Reprocess everything from scratch | Delete `checked.txt` before restarting |
 
 ---
