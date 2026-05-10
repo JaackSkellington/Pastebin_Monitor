@@ -6,21 +6,21 @@ An asynchronous Pastebin leak monitor built for **Cyber Threat Intelligence (CTI
 
 ## 📋 Table of Contents
 
-- [How it works](#-how-it-works)
-- [Requirements](#-requirements)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Usage](#-usage)
-- [Running in background with screen](#-running-in-background-with-screen)
-- [File structure](#-file-structure)
-- [Saved results](#-saved-results)
-- [Available parameters](#-available-parameters)
-- [WAF / Rate Limit protections](#-waf--rate-limit-protections)
-- [Performance tuning](#-performance-tuning)
-
+- [How it works](#how-it-works)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Running in background with screen](#running-in-background-with-screen)
+- [File structure](#file-structure)
+- [Saved results](#saved-results)
+- [Available parameters](#available-parameters)
+- [WAF / Rate Limit protections](#waf--rate-limit-protections)
+- [Performance tuning](#performance-tuning)
+  
 ---
 
-## ⚙️ How it works
+## <a id="how-it-works"></a>⚙️ How it works
 
 Each cycle runs a 4-step pipeline:
 
@@ -53,7 +53,7 @@ Already-processed IDs are kept in memory (`set`, O(1) lookup) and persisted to `
 
 ---
 
-## 🖥️ Requirements
+## <a id="requirements"></a>🖥️ Requirements
 
 - Python **3.10+**
 - pip
@@ -80,7 +80,7 @@ pip install aiohttp lxml
 
 ---
 
-## ⚙️ Configuration
+## <a id="configuration"></a>⚙️ Configuration
 
 ### 1. Define your keywords
 
@@ -140,8 +140,7 @@ python pastebin_monitor.py --help
 
 ---
 
-## 🖥️ Running in background with `screen`
-
+## <a id="running-in-background"></a>🖥️ Running in background with screen
 To keep the monitor running continuously on a Linux server even after closing your terminal, use `screen`:
 
 ```bash
@@ -253,7 +252,7 @@ The **Matched in** field has three possible values:
 
 ---
 
-## 🛡️ WAF / Rate Limit protections
+## <a id="waf-rate-limit"></a>🛡️ WAF / Rate Limit protections
 
 Pastebin uses Cloudflare with aggressive rate limiting. The script implements the following protections:
 
