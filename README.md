@@ -6,18 +6,18 @@ An asynchronous Pastebin leak monitor built for **Cyber Threat Intelligence (CTI
 
 ## 📋 Table of Contents
 
-- [How it works](#how-it-works)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Running in background with screen](#running-in-background-with-screen)
-- [File structure](#file-structure)
-- [Saved results](#saved-results)
-- [Available parameters](#available-parameters)
-- [WAF / Rate Limit protections](#waf--rate-limit-protections)
-- [Performance tuning](#performance-tuning)
-  
+- [How it works](#-how-it-works)
+- [Requirements](#-requirements)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [Usage](#-usage)
+- [Running in background with screen](#-running-in-background-with-screen)
+- [File structure](#-file-structure)
+- [Saved results](#-saved-results)
+- [Available parameters](#-available-parameters)
+- [WAF / Rate Limit protections](#-waf--rate-limit-protections)
+- [Performance tuning](#-performance-tuning)
+
 ---
 
 ## <a id="how-it-works"></a>⚙️ How it works
@@ -115,7 +115,7 @@ credit card
 
 ---
 
-## 🚀 Usage
+## <a id="usage"></a> 🚀 Usage
 
 ### Basic run
 
@@ -181,7 +181,7 @@ screen -r cti_pastebin
 
 ---
 
-## 📁 File structure
+## <a id="file-structure"></a>📁 File structure
 
 ```
 cti-pastebin-monitor/
@@ -200,7 +200,7 @@ cti-pastebin-monitor/
 
 ---
 
-## 📄 Saved results
+## <a id="saved-results"></a>📄 Saved results
 
 Each file in `results/` follows this naming pattern:
 
@@ -242,7 +242,7 @@ The **Matched in** field has three possible values:
 
 ---
 
-## 🔧 Available parameters
+## <a id="available-parameters"></a>🔧 Available parameters
 
 | Parameter | Short | Default | Description |
 |-----------|-------|---------|-------------|
@@ -280,7 +280,7 @@ BACKOFF_403_429: int = 300  # 5 minutes (increase if needed)
 
 ---
 
-## 📊 Performance tuning
+## <a id="performance-tuning"></a>📊 Performance tuning
 
 | Scenario | Recommendation |
 |----------|---------------|
