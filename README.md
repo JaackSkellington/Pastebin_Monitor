@@ -6,17 +6,17 @@ An asynchronous Pastebin leak monitor built for **Cyber Threat Intelligence (CTI
 
 ## 📋 Table of Contents
 
-- [How it works](#-how-it-works)
-- [Requirements](#-requirements)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Usage](#-usage)
-- [Running in background with screen](#-running-in-background-with-screen)
-- [File structure](#-file-structure)
-- [Saved results](#-saved-results)
-- [Available parameters](#-available-parameters)
-- [WAF / Rate Limit protections](#-waf--rate-limit-protections)
-- [Performance tuning](#-performance-tuning)
+- [How it works](#how-it-works)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Running in background with screen](#running-in-background)
+- [File structure](#file-structure)
+- [Saved results](#saved-results)
+- [Available parameters](#available-parameters)
+- [WAF / Rate Limit protections](#waf-rate-limit)
+- [Performance tuning](#performance-tuning)
 
 ---
 
@@ -61,7 +61,7 @@ Already-processed IDs are kept in memory (`set`, O(1) lookup) and persisted to `
 
 ---
 
-## 📦 Installation
+## <a id="installation"></a>📦 Installation
 
 ```bash
 # Clone the repository
