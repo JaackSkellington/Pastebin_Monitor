@@ -1,4 +1,4 @@
-# 🔍 CTI Pastebin Monitorr
+# 🔍 CTI Pastebin Monitor
 
 An asynchronous Pastebin leak monitor built for **Cyber Threat Intelligence (CTI)**. The script continuously scrapes [pastebin.com/archive](https://pastebin.com/archive) looking for pastes that contain keywords you define — credentials, domains, sensitive data, infrastructure strings, etc. — and automatically saves matches to disk.
 
